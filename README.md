@@ -8,7 +8,7 @@ docker run --name mariadb \
            -v /var/lib/mysql:/var/lib/mysql \
            -e MARIADB_USER=<USER> \
            -e MARIADB_PASSWORD=<PASSWORD> \
-           -e MARIADB_DATABASE=<DATABASE_NAME> \ 
+           -e MARIADB_DB=<DATABASE_NAME> \ 
            quay.io/amarruedo/mariadb:v0.2
 ```
 
