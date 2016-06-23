@@ -12,5 +12,5 @@ docker run --name mariadb \
            quay.io/amarruedo/mariadb:v0.2
 ```
 
-This will start a Mariadb instance and will create provided <USER> and <DATABASE_NAME> if they don't exist.
+This will start a Mariadb instance and will create provided USER and DATABASE_NAME if they don't exist.
 
