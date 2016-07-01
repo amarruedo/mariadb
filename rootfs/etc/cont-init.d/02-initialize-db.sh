@@ -29,7 +29,7 @@ USER_EXISTS="$(mysql -se "SELECT EXISTS(SELECT 1 FROM mysql.user WHERE user = \"
 if [ $USER_EXISTS -eq 0 ]; then
 
 	echo "User initialization"
-	echo "CREATE USER '${MARIADB_USER}'@'localhost' IDENTIFIED BY '${MARIADB_PASSWORD}';" | mysql
+	echo "CREATE USER '${MARIADB_USER}'@'%' IDENTIFIED BY '${MARIADB_PASSWORD}';" | mysql
 	echo "GRANT ALL ON *.* TO '${MARIADB_USER}'@'%' IDENTIFIED BY '${MARIADB_PASSWORD}' WITH GRANT OPTION; FLUSH PRIVILEGES" | mysql
 
 fi
